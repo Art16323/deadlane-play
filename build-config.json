@@ -1,8 +1,8 @@
 {
-  "loaderUrl": "Build/e22767deeccfc2a58de493d465c42e3c.loader.js",
-  "dataUrl": "Build/2f1c887ca1beb8a91928d19faaa5c4ce.data.unityweb",
+  "loaderUrl": "Build/4b49a81d1676b4f7f416bea9774223b7.loader.js",
+  "dataUrl": "Build/6a5ff85bfde3ce7cc374460114a6b195.data.unityweb",
   "frameworkUrl": "Build/c4c2d7af77295387bf8099c25d868425.framework.js.unityweb",
-  "codeUrl": "Build/9a77d36d586fdaa70e47ee61a8e9c89e.wasm.unityweb",
+  "codeUrl": "Build/09a8011dbc6b4d313f5d2a673ddf9e6e.wasm.unityweb",
   "streamingAssetsUrl": "StreamingAssets",
   "companyName": "ZombieSquadStudio",
   "productName": "DEADLANE",
