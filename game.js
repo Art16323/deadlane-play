@@ -146,10 +146,12 @@
   retryButton.addEventListener("click", () => window.location.reload());
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) sendToGame("OnPageHidden", "visibilitychange");
+    else sendToGame("OnPageShown", "visibilitychange");
   });
   window.addEventListener("pagehide", () => sendToGame("OnPageHidden", "pagehide"));
   window.addEventListener("pageshow", (event) => {
     if (event.persisted && started && !unityInstance) window.location.reload();
+    else if (!document.hidden) sendToGame("OnPageShown", "pageshow");
   });
   canvas.addEventListener("webglcontextlost", () => {
     showError("WebGL context lost", "Браузер освободил память игры. Закрой лишние вкладки и запусти игру снова.");
