@@ -1,0 +1,47 @@
+Deadlane UI Regular / Bold (modified Noto Sans),
+plus unmodified Noto Sans Symbols 2 and Noto Sans Math.
+Original static TrueType font files from the official Noto repository:
+https://github.com/notofonts/noto-fonts
+
+Downloaded 2026-10-29 from main/hinted/ttf/:
+NotoSans/NotoSans-Regular.ttf
+NotoSans/NotoSans-Bold.ttf
+NotoSansSymbols2/NotoSansSymbols2-Regular.ttf
+NotoSansMath/NotoSansMath-Regular.ttf
+
+Original copyright notices remain embedded in the font name tables:
+Copyright 2015-2021 Google LLC (Noto Sans), Copyright 2018 Google LLC
+(Noto Sans Math), and Copyright 2017 Google Inc. (Noto Sans Symbols 2).
+Redistribution and embedding under SIL Open Font License 1.1.
+See OFL.txt for the complete copyright notice and license.
+
+The importer embeds font data, so WebGL needs no operating-system font.
+
+DEADLANE modifications made 2026-10-29:
+- Integrated U+2212 (minus) from Noto Sans Math and U+2605/U+2606
+  (filled/outline stars) from Noto Sans Symbols 2 into BOTH main fonts.
+- Copied decomposed TrueType outlines and horizontal metrics using fontTools
+  TTFont, DecomposingRecordingPen, and TTGlyphPen. New outlines are unhinted;
+  no source hint bytecode or cross-font function references were imported.
+- Added the glyphs to the main Unicode cmap tables and glyph orders.
+- Preserved original ascent 1069, descent -293, lineGap 0, and unitsPerEm 1000.
+- Renamed the derivative family to Deadlane UI, full names to Deadlane UI
+  Regular/Bold, and PostScript names to DeadlaneUI-Regular/DeadlaneUI-Bold.
+  Updated derivative version/copyright/description and Unicode range metadata.
+- Kept filenames and Unity GUIDs for existing Resources loading compatibility.
+- Retained SIL OFL 1.1. Unmodified Math/Symbols2 remain as optional fallbacks,
+  but all characters used by current runtime UI exist in each MAIN font cmap.
+
+Tooling: system Python 3.9 with fontTools, inline Python processing (no C# change).
+
+Original upstream SHA-256:
+NotoSans-Regular.ttf
+b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5
+NotoSans-Bold.ttf
+c976e4b1b99edc88775377fcc21692ca4bfa46b6d6ca6522bfda505b28ff9d6a
+
+Modified SHA-256:
+NotoSans-Regular.ttf (566032 bytes)
+7d995bc3997b6c5c5df58101e760d2821018c9c13c274eceabbc532f78cdf320
+NotoSans-Bold.ttf (572600 bytes)
+7b88a2f05b9c701e8ec4ecb3174488a37c934e8cccfb6815a302bd64f16950d2

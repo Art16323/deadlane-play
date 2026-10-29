@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#091522">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="DEADLANE — собери отряд и прорвись через орду. Демо игры в браузере.">
+    <title>DEADLANE — играть</title>
+    <link rel="icon" type="image/png" href="./assets/app-icon.png">
+    <link rel="apple-touch-icon" href="./assets/app-icon.png">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./game.js" defer></script>
+  </head>
+  <body>
+    <main id="viewport" aria-label="DEADLANE">
+      <div id="game-container">
+        <canvas id="unity-canvas" width="540" height="960" tabindex="0" aria-label="Игра DEADLANE. Перемещай отряд пальцем, стрельба автоматическая."></canvas>
+
+        <section id="welcome" class="screen welcome" aria-labelledby="game-title">
+          <div class="topline"><span class="signal" aria-hidden="true"></span> МОБИЛЬНОЕ ДЕМО</div>
+          <div class="art" aria-hidden="true">
+            <img src="./assets/app-icon.png" alt="" fetchpriority="high">
+            <div class="art-shade"></div>
+            <div class="art-mark">ВЫХОД ЕСТЬ.<br>ПУТЬ ПРИДЁТСЯ ПРОБИТЬ.</div>
+          </div>
+          <div class="welcome-content">
+            <p class="eyebrow">ОТРЯД ПРОТИВ ОРДЫ</p>
+            <h1 id="game-title">DEAD<span>LANE</span></h1>
+            <p class="intro">Собери бойцов. Усиль оружие.<br>Прорвись через толпы зомби.</p>
+            <button id="play-button" class="primary" type="button"><span>Играть</span><span class="arrow" aria-hidden="true">↗</span></button>
+            <p class="controls"><span class="drag-mark" aria-hidden="true">↔</span> Веди отряд пальцем — он стреляет сам</p>
+          </div>
+          <p class="privacy">Демо · прогресс хранится в этом браузере</p>
+        </section>
+
+        <section id="loading" class="screen loading" aria-labelledby="loading-title" hidden>
+          <div class="loading-content">
+            <p class="eyebrow">DEADLANE</p>
+            <h2 id="loading-title">Готовим отряд</h2>
+            <div class="loading-number" aria-hidden="true"><span id="progress-number">0</span><span class="percent">%</span></div>
+            <div id="progress" class="progress" role="progressbar" aria-label="Загрузка игры" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div>
+            <p id="loading-status" class="status" role="status">Соединяемся…</p>
+            <p class="loading-note">Первая загрузка займёт немного времени.<br>Оставь эту вкладку открытой.</p>
+          </div>
+          <p class="privacy">Демо · прогресс хранится в этом браузере</p>
+        </section>
+
+        <section id="error" class="screen error" aria-labelledby="error-title" hidden>
+          <div class="error-content">
+            <div class="error-mark" aria-hidden="true">!</div>
+            <p class="eyebrow">DEADLANE</p>
+            <h2 id="error-title">Не удалось запустить игру</h2>
+            <p id="error-description">Проверь подключение и попробуй ещё раз.</p>
+            <button id="retry-button" class="primary" type="button"><span>Попробовать снова</span><span class="arrow" aria-hidden="true">↻</span></button>
+            <details id="error-details"><summary>Подробности</summary><pre id="error-message"></pre></details>
+          </div>
+        </section>
+
+        <aside id="orientation-hint" role="status" aria-label="Поверни телефон вертикально">
+          <div class="phone-mark" aria-hidden="true"></div>
+          <strong>Поверни телефон вертикально</strong>
+          <span>Так удобнее управлять отрядом</span>
+        </aside>
+        <noscript><div class="noscript">Для игры нужен JavaScript. Включи его в настройках браузера.</div></noscript>
+      </div>
+    </main>
+  </body>
+</html>
